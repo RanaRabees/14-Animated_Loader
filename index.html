@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Loader</title>
+</head>
+<body id="body" >
+    <div class="main_div">
+        <div class="center-div">
+            <span class="loader"></span>
+            <span class="image"></span>
+        </div>
+    </div>
+
+<style>
+    *,
+*::before,
+*::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.main_div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #16a085;
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/10/HD-Forest-Photos-620x349.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.center-div{
+    width: 50vw;
+    height: calc(100vh - 90vh);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+.image{
+    width: 15rem;
+    height: 15rem;
+    background-image: url('https://avatars.githubusercontent.com/u/104692519?s=400&u=d4ffccad72f330738716edc7cbdc81e77da0acbe&v=4');
+    background-size: 100%;
+    border: 1.5rem dotted transparent;
+    border-radius: 50%;
+    animation: loader 3s linear infinite;
+}
+.loader{
+    width: 15rem;
+    height: 15rem;
+    background: transparent;
+    background-size: 100%;
+    background: opaque;
+    border: 1.5rem double rgb(72, 61, 61);
+    border-top: 1.5rem dotted #004c03;
+    border-radius: 50%;
+    animation-delay: 5.2s;
+    animation: loader 2s linear infinite;
+}
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+</style>
+</body>
+</html>
